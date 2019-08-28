@@ -15,9 +15,9 @@ module.exports = {
         maxTransactionsPerSender: process.env.CORE_TRANSACTION_POOL_MAX_PER_SENDER || 300,
         allowedSenders: [],
         dynamicFees: {
-            enabled: true,
-            minFeePool: 1000,
-            minFeeBroadcast: 1000,
+            enabled: false,
+            minFeePool: 3000,
+            minFeeBroadcast: 3000,
             addonBytes: {
                 transfer: 100,
                 secondSignature: 250,
@@ -27,7 +27,7 @@ module.exports = {
                 ipfs: 250,
                 timelockTransfer: 500,
                 multiPayment: 500,
-                delegateResignation: 400000,
+                delegateResignation: 100,
             },
         },
     },
